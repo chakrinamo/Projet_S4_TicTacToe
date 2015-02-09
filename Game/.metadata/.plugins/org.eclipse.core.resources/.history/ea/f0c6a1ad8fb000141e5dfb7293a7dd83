@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="projet.iut.tic_tac_toe.MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+     <Button
+        android:id="@+id/Rejouer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rejouer" />
+    
+    
+     <Button
+        android:id="@+id/A1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/A3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/A2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/B1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/B2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/B3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/C1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/C2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/C3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#33b5e5"
+        android:textSize="45dp" />
+
+   
+
+</RelativeLayout>
