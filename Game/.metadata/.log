@@ -768,3 +768,2316 @@ java.lang.NullPointerException
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
 	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY com.android.ide.eclipse.adt 4 4 2015-02-09 21:33:10.069
+!MESSAGE Failed
+!STACK 0
+java.lang.NullPointerException
+	at com.android.tools.lint.detector.api.LintUtils.getChildCount(LintUtils.java:238)
+	at com.android.tools.lint.checks.ButtonDetector.isInButtonBar(ButtonDetector.java:662)
+	at com.android.tools.lint.checks.ButtonDetector.visitElement(ButtonDetector.java:315)
+	at com.android.tools.lint.client.api.ResourceVisitor.visitElement(ResourceVisitor.java:177)
+	at com.android.tools.lint.client.api.ResourceVisitor.visitElement(ResourceVisitor.java:213)
+	at com.android.tools.lint.client.api.ResourceVisitor.visitFile(ResourceVisitor.java:158)
+	at com.android.tools.lint.client.api.LintDriver.checkIndividualResources(LintDriver.java:1901)
+	at com.android.tools.lint.client.api.LintDriver.runFileDetectors(LintDriver.java:996)
+	at com.android.tools.lint.client.api.LintDriver.checkProject(LintDriver.java:880)
+	at com.android.tools.lint.client.api.LintDriver.analyze(LintDriver.java:431)
+	at com.android.tools.lint.client.api.LintDriver.analyze(LintDriver.java:374)
+	at com.android.ide.eclipse.adt.internal.lint.LintJob.run(LintJob.java:163)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-09 22:37:06.675
+!MESSAGE Failed to render set of icons for TabHost
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-09 22:37:06.676
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onThemeChange(ConfigurationChooser.java:1552)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.SelectThemeAction.run(SelectThemeAction.java:48)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem$9.handleEvent(ActionContributionItem.java:1293)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-09 22:37:06.692
+!MESSAGE Failed to render set of icons for TabWidget
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-09 22:37:06.694
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onThemeChange(ConfigurationChooser.java:1552)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.SelectThemeAction.run(SelectThemeAction.java:48)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem$9.handleEvent(ActionContributionItem.java:1293)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-09 22:37:37.684
+!MESSAGE Failed to render set of icons for TabHost
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-09 22:37:37.685
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onThemeChange(ConfigurationChooser.java:1552)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.SelectThemeAction.run(SelectThemeAction.java:48)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-09 22:37:37.715
+!MESSAGE Failed to render set of icons for TabWidget
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-09 22:37:37.716
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onThemeChange(ConfigurationChooser.java:1552)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.SelectThemeAction.run(SelectThemeAction.java:48)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-09 22:37:53.740
+!MESSAGE Failed to render set of icons for TabHost
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-09 22:37:53.741
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onThemeChange(ConfigurationChooser.java:1552)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.SelectThemeAction.run(SelectThemeAction.java:48)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem$9.handleEvent(ActionContributionItem.java:1293)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-09 22:37:53.775
+!MESSAGE Failed to render set of icons for TabWidget
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-09 22:37:53.776
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onThemeChange(ConfigurationChooser.java:1552)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.SelectThemeAction.run(SelectThemeAction.java:48)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem$9.handleEvent(ActionContributionItem.java:1293)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-09 22:38:36.888
+!MESSAGE Failed to render set of icons for TabHost
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-09 22:38:36.889
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onThemeChange(ConfigurationChooser.java:1552)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.SelectThemeAction.run(SelectThemeAction.java:48)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem$9.handleEvent(ActionContributionItem.java:1293)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-09 22:38:36.903
+!MESSAGE Failed to render set of icons for TabWidget
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-09 22:38:36.904
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onThemeChange(ConfigurationChooser.java:1552)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.SelectThemeAction.run(SelectThemeAction.java:48)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem$9.handleEvent(ActionContributionItem.java:1293)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2015-02-09 22:43:26.036
+!MESSAGE Internal Error
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:423)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:331)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:637)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:153)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:710)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.VisualRefactoringWizard.performFinish(VisualRefactoringWizard.java:40)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:455)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:187)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:122)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.ChangeLayoutAction.run(ChangeLayoutAction.java:37)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:253)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:237)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.project.SupportLibraryHelper.getTagFor(SupportLibraryHelper.java:103)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.GridLayoutConverter.insertStretchableSpans(GridLayoutConverter.java:232)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.GridLayoutConverter.convertToGridLayout(GridLayoutConverter.java:155)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.ChangeLayoutRefactoring.convertAnyToGridLayout(ChangeLayoutRefactoring.java:616)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.ChangeLayoutRefactoring.computeChanges(ChangeLayoutRefactoring.java:288)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.VisualRefactoring.checkFinalConditions(VisualRefactoring.java:250)
+	at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:85)
+	at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:121)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:209)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Root exception:
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.project.SupportLibraryHelper.getTagFor(SupportLibraryHelper.java:103)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.GridLayoutConverter.insertStretchableSpans(GridLayoutConverter.java:232)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.GridLayoutConverter.convertToGridLayout(GridLayoutConverter.java:155)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.ChangeLayoutRefactoring.convertAnyToGridLayout(ChangeLayoutRefactoring.java:616)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.ChangeLayoutRefactoring.computeChanges(ChangeLayoutRefactoring.java:288)
+	at com.android.ide.eclipse.adt.internal.editors.layout.refactoring.VisualRefactoring.checkFinalConditions(VisualRefactoring.java:250)
+	at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:85)
+	at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:121)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:209)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2015-02-21 08:57:08.484 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-02-21 08:57:19.660
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.m2e.logback.configuration 2 0 2015-02-21 08:57:21.863
+!MESSAGE Exception while setting up logging:org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+!STACK 0
+java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+	at org.eclipse.m2e.logback.configuration.LogHelper.logJavaProperties(LogHelper.java:26)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:189)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-02-21 08:59:09.532
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-02-21 08:59:09.537
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Comb's'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 09:04:59.848
+!MESSAGE Failed to load properties file for project 'TicTacToe'
+
+!ENTRY org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.indent,Correct Indentation,
+		Corrects the indentation of the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5580b0fd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d1551f4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@73e3dde5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29e3206f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@74fd20d3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6e2cb6a4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.matching.bracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@167638a6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.m2e.core.ui.command.addPlugin,Add Maven Plugin,
+		Add Maven Plugin,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2b8125cf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.core.runtime.xml,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3acfb58f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.show.outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2bd94f59,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47e8728c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.add.block.comment,Add Block Comment,
+		Enclose the selection with a block comment,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6db86a35,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52c759dd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.previous.member,Go to Previous Member,
+		Move the caret to the previous member of the compilation unit,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6644f5d9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1645ed29,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3968ae03,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b7c73b5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7786467,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7a583e1e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7107aa05,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6295923f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.remove.block.comment,Remove Block Comment,
+		Remove the block comment enclosing the selection,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e2b683c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,Remove Block Comment,
+		Remove Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d50e338,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.071
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.goto.next.member,Go to Next Member,
+		Move the caret to the next member of the compilation unit,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@23c852d2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2354fb09,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-02-21 09:21:11.072
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34b56b58,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.jdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d15f5f2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-21 10:19:13.232
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-21 10:20:02.197
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-21 10:20:48.896
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-21 10:21:58.854
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-21 10:30:35.336
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-21 10:31:17.993
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.CastExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-21 10:37:26.621
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-21 10:38:05.780
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.CastExpression as parent of completion location.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:41:30.770
+!MESSAGE No command output when running: 'am start -n projet.iut.tic_tac_toe/projet.iut.tic_tac_toe.MainActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER' on device emulator-5554
+!STACK 0
+com.android.ddmlib.ShellCommandUnresponsiveException
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:430)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:347)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:610)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(ActivityLaunchAction.java:67)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(ActivityLaunchAction.java:109)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.doLaunchAction(AndroidLaunchController.java:1293)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.doLaunchAction(AndroidLaunchController.java:1305)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launchApp(AndroidLaunchController.java:1277)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(AndroidLaunchController.java:913)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.continueLaunch(AndroidLaunchController.java:755)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launch(AndroidLaunchController.java:575)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.doLaunch(LaunchConfigDelegate.java:330)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:246)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:54:26.092
+!MESSAGE activity_main.xml: Dimension "300" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:54:34.637
+!MESSAGE activity_main.xml: Dimension "30" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:54:48.721
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.570
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.585
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.600
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.613
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.623
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.634
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.647
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.658
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:56:10.669
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.092
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.097
+!MESSAGE activity_main.xml: Failed to convert red into a drawable
+!STACK 0
+java.lang.NumberFormatException: Color value 'red' must start with #
+	at com.android.layoutlib.bridge.impl.ResourceHelper.getColor(ResourceHelper.java:73)
+	at com.android.layoutlib.bridge.impl.ResourceHelper.getDrawable(ResourceHelper.java:264)
+	at android.content.res.BridgeTypedArray.getDrawable(BridgeTypedArray.java:674)
+	at android.view.View.<init>(View.java:3730)
+	at android.widget.TextView.<init>(TextView.java:634)
+	at android.widget.Button.<init>(Button.java:111)
+	at android.widget.Button.<init>(Button.java:107)
+	at android.widget.Button.<init>(Button.java:103)
+	at sun.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at android.view.LayoutInflater.createView(LayoutInflater.java:607)
+	at android.view.BridgeInflater.onCreateView(BridgeInflater.java:82)
+	at android.view.LayoutInflater.onCreateView(LayoutInflater.java:682)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:741)
+	at android.view.BridgeInflater.createViewFromTag(BridgeInflater.java:128)
+	at android.view.LayoutInflater.rInflate_Original(LayoutInflater.java:806)
+	at android.view.LayoutInflater_Delegate.rInflate(LayoutInflater_Delegate.java:64)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:782)
+	at android.view.LayoutInflater.rInflate_Original(LayoutInflater.java:809)
+	at android.view.LayoutInflater_Delegate.rInflate(LayoutInflater_Delegate.java:64)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:782)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:504)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:385)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:400)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.renderWithBridge(GraphicalEditorPart.java:1584)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.recomputeLayout(GraphicalEditorPart.java:1309)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.activated(GraphicalEditorPart.java:1066)
+	at com.android.ide.eclipse.adt.internal.editors.layout.LayoutEditorDelegate.delegatePageChange(LayoutEditorDelegate.java:686)
+	at com.android.ide.eclipse.adt.internal.editors.common.CommonXmlEditor.pageChange(CommonXmlEditor.java:360)
+	at org.eclipse.ui.part.MultiPageEditorPart$2.widgetSelected(MultiPageEditorPart.java:294)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3110)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1794)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:283)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.104
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.115
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.126
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.137
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.148
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.158
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.170
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.181
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 10:58:06.192
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.388
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.396
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.418
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.425
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.432
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.441
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.448
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.456
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.463
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:15.471
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.214
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.225
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.236
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.246
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.256
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.265
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.274
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.282
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.292
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:02:55.301
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:05.366
+!MESSAGE palette: Different corner sizes are not supported in Path.addRoundRect.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:20.178
+!MESSAGE palette: Different corner sizes are not supported in Path.addRoundRect.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:20.367
+!MESSAGE palette: Path.isConvex is not supported.
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-21 11:03:27.287
+!MESSAGE Failed to render set of icons for TabHost
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.331
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onDeviceChange(ConfigurationChooser.java:1411)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.DeviceMenuListener.widgetSelected(DeviceMenuListener.java:68)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-21 11:03:27.351
+!MESSAGE Failed to render set of icons for TabWidget
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.352
+!MESSAGE Could not create tab content because could not find view with id -1
+!STACK 0
+java.lang.RuntimeException: Could not create tab content because could not find view with id -1
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:695)
+	at android.widget.TabHost$ViewIdContentStrategy.<init>(TabHost.java:686)
+	at android.widget.TabHost$TabSpec.setContent(TabHost.java:535)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.setupTabHost(RenderSessionImpl.java:1373)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1218)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.postInflateProcess(RenderSessionImpl.java:1296)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:411)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.render(PreviewIconFactory.java:273)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.initColors(PreviewIconFactory.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PreviewIconFactory.getBackgroundColor(PreviewIconFactory.java:570)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.PaletteControl.reloadPalette(PaletteControl.java:437)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.reloadPalette(GraphicalEditorPart.java:1327)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.changed(GraphicalEditorPart.java:771)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.ConfigurationChooser.onDeviceChange(ConfigurationChooser.java:1411)
+	at com.android.ide.eclipse.adt.internal.editors.layout.configuration.DeviceMenuListener.widgetSelected(DeviceMenuListener.java:68)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.423
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.431
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.439
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.446
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.454
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.461
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.468
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.478
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.486
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:03:27.493
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.362
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.374
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.385
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.396
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.407
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.417
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.428
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.439
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.456
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:32.469
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.454
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.467
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.478
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.488
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.499
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.510
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.520
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.531
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.540
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:04:42.547
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.263
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.272
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.279
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.286
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.297
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.307
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.318
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.330
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.340
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:05.348
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:06.933
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:06.941
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:06.948
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:06.974
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:06.983
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:06.993
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:07.000
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:07.008
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:07.017
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:07.026
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.224
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.233
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.242
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.250
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.258
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.265
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.272
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.282
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.289
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:05:25.317
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.435
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.447
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.457
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.468
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.480
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.489
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.497
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.505
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.513
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:43.522
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.858
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.867
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.877
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.885
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.894
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.902
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.910
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.919
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.927
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:06:59.936
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.074
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.082
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.090
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.098
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.106
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.114
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.122
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.131
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.139
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:04.151
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.718
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.728
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.736
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.745
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.754
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.762
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.770
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.778
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.786
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:05.797
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.575
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.583
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.591
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.599
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.607
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.615
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.623
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.631
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.643
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:06.655
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.390
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.399
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.408
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.418
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.426
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.437
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.447
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.457
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.471
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:07.485
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.237
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.246
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.253
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.261
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.270
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.278
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.285
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.297
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.309
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.320
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.831
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.839
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.846
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.853
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.861
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.868
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.875
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.889
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.900
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:08.911
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.253
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.261
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.268
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.276
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.283
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.291
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.302
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.313
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.324
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.335
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.641
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.652
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.663
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.673
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.683
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.691
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.702
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.714
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.726
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:09.737
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.283
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.292
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.300
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.309
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.317
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.330
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.361
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.373
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.386
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.397
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.699
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.710
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.720
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.730
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.737
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.748
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.760
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.773
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.788
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:10.799
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.197
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.205
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.213
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.221
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.233
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.245
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.258
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.274
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.287
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.300
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.727
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.736
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.746
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.756
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.770
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.788
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.805
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.822
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.838
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:11.852
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.723
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.731
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.739
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.750
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.761
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.772
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.783
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.794
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.805
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:12.816
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.720
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.732
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.740
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.751
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.764
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.777
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.789
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.803
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.814
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:13.826
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.898
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.906
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.919
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.931
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.944
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.956
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.968
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.981
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:15.993
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:16.005
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.238
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.246
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.258
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.270
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.281
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.292
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.304
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.316
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.328
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:17.340
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.229
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.243
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.254
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.267
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.278
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.291
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.303
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.315
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.326
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:20.338
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.579
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.591
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.603
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.617
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.629
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.642
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.655
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.669
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.686
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:43.698
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.739
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.751
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.763
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.774
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.786
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.812
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.823
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.835
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.848
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-21 11:07:44.861
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+!SESSION 2015-02-24 06:20:29.028 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.configuration 2 0 2015-02-24 06:20:45.944
+!MESSAGE Exception while setting up logging:org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+!STACK 0
+java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+	at org.eclipse.m2e.logback.configuration.LogHelper.logJavaProperties(LogHelper.java:26)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:189)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-02-24 06:22:06.054
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-02-24 06:22:06.056
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Comb's'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.550
+!MESSAGE activity_main.xml: Dimension "40" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.584
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.607
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.633
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.656
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.676
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.698
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.722
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.747
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 06:23:51.775
+!MESSAGE activity_main.xml: Dimension "50" in attribute "textSize" is missing unit!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-24 06:35:52.769
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-24 06:35:56.124
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-02-24 06:42:24.351
+!MESSAGE Can't handle class org.eclipse.jdt.internal.compiler.ast.EqualExpression as parent of completion location.
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-24 07:00:56.071
+!MESSAGE activity_main.xml: "90dp" in attribute "layout_weight" cannot be converted to float.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 07:53:18.770
+!MESSAGE Warning: Ignoring name conflict in resource file for name hello_world
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 07:53:22.311
+!MESSAGE Warning: Ignoring name conflict in resource file for name hello_world
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 08:03:01.747
+!MESSAGE activity_menu.xml: java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at com.android.layoutlib.bridge.impl.ResourceHelper.getDrawable(ResourceHelper.java:189)
+	at android.content.res.BridgeTypedArray.getDrawable(BridgeTypedArray.java:674)
+	at android.view.View.<init>(View.java:3730)
+	at android.view.ViewGroup.<init>(ViewGroup.java:491)
+	at android.widget.RelativeLayout.<init>(RelativeLayout.java:248)
+	at android.widget.RelativeLayout.<init>(RelativeLayout.java:244)
+	at android.widget.RelativeLayout.<init>(RelativeLayout.java:240)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at android.view.LayoutInflater.createView(LayoutInflater.java:607)
+	at android.view.BridgeInflater.onCreateView(BridgeInflater.java:82)
+	at android.view.LayoutInflater.onCreateView(LayoutInflater.java:682)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:741)
+	at android.view.BridgeInflater.createViewFromTag(BridgeInflater.java:128)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:482)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:385)
+	at com.android.layoutlib.bridge.impl.RenderSessionImpl.inflate(RenderSessionImpl.java:400)
+	at com.android.layoutlib.bridge.Bridge.createSession(Bridge.java:332)
+	at com.android.ide.common.rendering.LayoutLibrary.createSession(LayoutLibrary.java:332)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.RenderService.createRenderSession(RenderService.java:517)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.renderWithBridge(GraphicalEditorPart.java:1584)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.recomputeLayout(GraphicalEditorPart.java:1309)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GraphicalEditorPart.onXmlModelChanged(GraphicalEditorPart.java:1267)
+	at com.android.ide.eclipse.adt.internal.editors.layout.LayoutEditorDelegate.delegateXmlModelChanged(LayoutEditorDelegate.java:402)
+	at com.android.ide.eclipse.adt.internal.editors.common.CommonXmlEditor.xmlModelChanged(CommonXmlEditor.java:329)
+	at com.android.ide.eclipse.adt.internal.editors.AndroidXmlEditor$XmlModelStateListener.modelChanged(AndroidXmlEditor.java:1653)
+	at com.android.ide.eclipse.adt.internal.editors.AndroidXmlEditor.wrapEditXmlModel(AndroidXmlEditor.java:1114)
+	at com.android.ide.eclipse.adt.internal.editors.AndroidXmlEditor.wrapUndoEditXmlModel(AndroidXmlEditor.java:1190)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.DynamicContextMenu$3.run(DynamicContextMenu.java:440)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 08:08:06.969
+!MESSAGE activity_menu.xml: Dimension "1" in attribute "layout_height" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 08:28:11.548
+!MESSAGE activity_menu.xml: Dimension "60" in attribute "layout_marginRight" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 08:29:22.751
+!MESSAGE activity_menu.xml: Dimension "20" in attribute "layout_marginRight" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 08:29:29.640
+!MESSAGE activity_menu.xml: Dimension "20" in attribute "layout_marginRight" is missing unit!
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:12:20.338
+!MESSAGE Warning: Ignoring name conflict in resource file for name hello_world
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:12:20.340
+!MESSAGE Warning: Ignoring name conflict in resource file for name action_settings
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:12:20.351
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:12:20.352
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_vertical_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:12:20.361
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:13:00.411
+!MESSAGE Warning: Ignoring name conflict in resource file for name hello_world
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:13:00.412
+!MESSAGE Warning: Ignoring name conflict in resource file for name action_settings
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:13:00.425
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:13:00.426
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_vertical_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:13:00.435
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:14:01.834
+!MESSAGE Warning: Ignoring name conflict in resource file for name hello_world
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:14:01.835
+!MESSAGE Warning: Ignoring name conflict in resource file for name action_settings
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:14:01.849
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:14:01.851
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_vertical_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-24 09:14:01.861
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+!SESSION 2015-02-25 16:15:02.694 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.configuration 2 0 2015-02-25 16:15:08.944
+!MESSAGE Exception while setting up logging:org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+!STACK 0
+java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+	at org.eclipse.m2e.logback.configuration.LogHelper.logJavaProperties(LogHelper.java:26)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:189)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-02-25 16:15:42.116
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-02-25 16:15:42.131
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Comb's'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
