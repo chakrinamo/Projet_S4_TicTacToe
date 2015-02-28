@@ -1,1 +1,7 @@
-/classes/
+/.classpath
+/.project
+/.settings/
+/gen/
+/libs/
+/res/
+/src/
