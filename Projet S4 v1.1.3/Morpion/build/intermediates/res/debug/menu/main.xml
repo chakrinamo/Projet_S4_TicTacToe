@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="projet.iut.morpion.MainActivity" >
+    
+    <item android:id="@+id/game" android:title="Jouer"></item>
+    <item android:id="@+id/opt" android:title="Option"></item>
+    <item android:id="@+id/about" android:title="A propos"></item>
+    <item android:id="@+id/help" android:title="Aide"></item>
+    <item android:id="@+id/exit" android:title="Quitter"></item>
+
+</menu>
+<!-- From: file:/C:/Users/Zouhairi/AndroidStudioProjects/Projet%20S4/Morpion/src/main/res/menu/main.xml -->
